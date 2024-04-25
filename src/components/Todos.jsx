@@ -27,10 +27,10 @@ function Todos({ onEditTodo }) {
             <div className="flex justify-between gap-2">
               <button
                 onClick={() => handleEditTodo(todo.id)}
-                className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
+                className="text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded text-md"
               >
                 <svg
-                  fill="#000000"
+                  fill="#ffffff"
                   height="20px"
                   width="20px"
                   version="1.1"
@@ -89,4 +89,4 @@ function Todos({ onEditTodo }) {
   );
 }
 
-export default Todos;
+export default React.memo(Todos);

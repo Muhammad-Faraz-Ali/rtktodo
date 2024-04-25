@@ -22,11 +22,14 @@ function AddTodo() {
     setIdEditTodo(false);
   };
 
-  const editTodoHandler = (todo) => {
-    setInput(todo?.text);
-    setTodoToUpdateId(todo?.id);
-    setIdEditTodo(true);
-  };
+  const editTodoHandler = useCallback(
+    (todo) => {
+      setInput(todo?.text);
+      setTodoToUpdateId(todo?.id);
+      setIdEditTodo(true);
+    },
+    [todoToUpdateId]
+  );
 
   return (
     <>
